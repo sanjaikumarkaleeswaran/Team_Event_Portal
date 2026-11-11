@@ -19,4 +19,18 @@ function renderEvents(items = events) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => renderEvents());
+document.addEventListener('DOMContentLoaded', () => {
+  renderEvents();
+
+  const searchBox = document.getElementById('search-event');
+
+  searchBox.addEventListener('input', function () {
+    const searchText = this.value.trim().toLowerCase();
+
+    const filteredEvents = events.filter(event =>
+      event.title.toLowerCase().includes(searchText)
+    );
+
+    renderEvents(filteredEvents);
+  });
+});
