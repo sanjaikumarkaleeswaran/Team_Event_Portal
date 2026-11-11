@@ -1,20 +1,94 @@
 :root {
   --brand: #164e63;
---accent: #22c55e;
+  --accent: #22c55e;
   --page: #f2f5fa;
   --text: #060b16;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: system-ui, Arial, sans-serif; background: var(--page); color: var(--text); }
-.site-header { background: var(--brand); color: white; text-align: center; padding: 28px 16px; }
-.site-header nav { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.site-header a { color: white; text-decoration: none; font-weight: bold; }
-.site-header a:hover { color: var(--accent); }
-main { max-width: 960px; margin: 24px auto; padding: 0 16px; }
-.panel { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px #0001; }
-.event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-.event-card { border: 1px solid #d5dae4; border-radius: 8px; padding: 16px; }
-button { background: var(--brand); border: 0; border-radius: 6px; color: white; padding: 10px 14px; cursor: pointer; }
-button:hover { background: #434955; }
-footer { text-align: center; padding: 22px; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--page);
+  color: var(--text);
+}
+
+.site-header {
+  background: var(--brand);
+  color: white;
+  text-align: center;
+  padding: 28px 16px;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px #0002;
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.site-header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-header a:hover {
+  color: var(--accent);
+}
+
+main {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.event-card {
+  border: 1px solid #d5dae4;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+button {
+  background: var(--brand);
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #434955;
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+}
